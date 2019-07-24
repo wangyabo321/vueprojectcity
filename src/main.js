@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Axios from 'axios'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'babel-polyfill'
@@ -15,7 +16,7 @@ import 'swiper/dist/css/swiper.css'
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
-
+Vue.prototype.$axios = Axios
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
